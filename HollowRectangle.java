@@ -8,6 +8,7 @@ public class HollowRectangle {
                     if (i==1||i==rows||j==1||j==cols)
                     {
                         System.out.print("*");
+                        
                     }
                     else 
                     {
