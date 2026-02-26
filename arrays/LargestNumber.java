@@ -4,6 +4,7 @@ public class LargestNumber {
     public static int largest_number(int num[])
     {
         int largest=Integer.MIN_VALUE;
+        int smallest=Integer.MAX_VALUE;
         for(int i=0;i<num.length;i++)
         {
             if (num[i]>largest)
@@ -11,7 +12,12 @@ public class LargestNumber {
                 largest=num[i];
             }
             
+            if(num[i]<smallest)
+            {
+                smallest=num[i];
+            }
         }
+        System.out.println("Smallest value is "+smallest);
         return largest;
     }
     public static void main(String[] args) {
