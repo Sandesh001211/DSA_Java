@@ -1,7 +1,7 @@
 package arrays;
 
 public class BinarySearch {
-    public static int binary_search(int num[], int key) {
+    public static int [] binary_search(int num[], int key) {
         int start = 0;
         int end = num.length - 1;
 
@@ -10,7 +10,7 @@ public class BinarySearch {
             int mid = (start + end) / 2;
 
             if (num[mid] == key) {
-                return mid;
+                return new int[]{mid,mid+1};
             }
             if (num[mid] < key) {
                 start = mid + 1;
@@ -20,13 +20,15 @@ public class BinarySearch {
             }
 
         }
-        return -1;
+        return new int []{-1,-1};
     }
 
     public static void main(String[] args) {
         int num[] = { 2, 4, 6, 8, 10, 12 };
         int key = 10;
-        int res = binary_search(num, key);
-        System.out.println("Item found at index : " + res);
+        int [] res = binary_search(num, key);
+        System.out.println("Item found at index : " + res[0]);
+        System.out.println("Item found at Position : " + res[1]);
+
     }
 }
