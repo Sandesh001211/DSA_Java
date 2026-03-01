@@ -3,6 +3,10 @@ package arrays;
 public class TrappedWater {
     public static int trapped_water(int height[])
     {
+        if (height==null||height.length<3) //edge cases 
+        {
+            return 0;
+        }
         int n =height.length;
         //leftMaxBoundry
         int left []=new int [n];
