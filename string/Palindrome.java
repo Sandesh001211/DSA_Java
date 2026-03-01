@@ -3,9 +3,9 @@ class Palindrome
 {
     public static boolean palindrome_check(String pal)
     {   int n=pal.length();
-        for (int i=0;i<pal.length();i++)
+        for (int i=0;i<pal.length()/2;i++)//halfway
         {
-            if (pal.charAt(i)!=pal.charAt(n-1-i))
+            if (pal.charAt(i)!=pal.charAt(n-i-1))
             {
                 return false;
             }
@@ -13,7 +13,7 @@ class Palindrome
         return true;
     }
     public static void main(String[] args) {
-        String pal="na";
+        String pal="nan";
         System.out.println(palindrome_check(pal));
     }
 }
